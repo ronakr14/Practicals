@@ -1,0 +1,8 @@
+server=NIT1LPT-24-035
+database=tech_training
+username=sa
+password=Kg@#$2211
+table=customers_100000
+csv_file=C:/Users/kavya.garg/OneDrive - Nitor Infotech Pvt. Ltd/Documents/python/customers-100000  
+encoding=utf-8  
+batch_size=1000 

@@ -1,0 +1,102 @@
+Python Assignment-4
+
+Q.1 Types of S3 storage.
+Sol- 
+> Amazon Simple Storage Service (S3) is used for storing data in the form of objects. Amazon S3 also provides industry-leading scalability, data availability, security, and performance. 
+The data which is uploaded by the user in S3, that data is stored as objects and provided an ID.
+> It stores in shapes like buckets and can upload a maximum file size of 5 terabytes (TB). This service is basically designed for the online backup and archiving of data and applications on Amazon Web Services (AWS).
+
+> Amazon Web Services (AWS) offers a variety of storage devices, including:
+1) Amazon EBS Snapshots- A low-cost storage solution that stores snapshots on Amazon S3
+2) Elastic File System (Amazon EFS) - A network file system that can automatically expand and contract based on demand
+3) AWS Storage Gateway- A service that allows users to store data in Amazon S3 using existing on-premises enterprise storage devices
+4) AWS DataSync- A service that allows users to share file systems or object storage, and move encrypted data into Amazon storage systems
+5) AWS Snowball- An edge computing, data migration, and edge storage device that comes in two options, including one that provides 80 TB of Amazon S3 object storage
+
+Q.2 Scale up, scale down, horizontal and vertical scale up.
+> Scaling up lets you add more resources to easily handle peak workloads. Then, when the resources are not needed anymore, scaling down lets you go back to the original state and save on cloud costs.
+> Horizontal scaling involves adding additional servers and partitioning the system dataset and load over those servers. Vertical scaling involves expanding the resources used by a single server/replica set.
+
+Q.3 Faas ?
+> Function-as-a-Service (FaaS) is a serverless way to execute modular pieces of code on the edge. FaaS lets developers write and update a piece of code on the fly, which can then be executed in response to an event, such as a user clicking on an element in a web application.
+Q.4 Public, private, hybrid, multi cloud.
+> Public cloud is open to all to store and access information via the Internet using the pay-per-usage method.
+> Private cloud is also known as an internal cloud or corporate cloud. It is used by organizations to build and manage their own data centers internally or by the third party.
+> Hybrid cloud is partially secure because the services which are running on the public cloud can be accessed by anyone, while the services which are running on a private cloud can be accessed only by the organization's users.
+> Multi-cloud is a strategy in cloud computing where companies utilize more than one cloud service provider or platform to meet their computing needs.
+
+Q.5 type of s3 file segregation. Cloud storage levels.
+> There are three main cloud storage types: object storage, file storage, and block storage. 
+1) Object storage is a data storage architecture for large stores of unstructured data. Objects store data in the format it arrives in and makes it possible to customize metadata in ways that make the data easier to access and analyze. 
+2) File-based storage or file storage is widely used among applications and stores data in a hierarchical folder and file format. 
+3) In this case, you can use a cloud storage service that stores data in the form of blocks. Each block has its own unique identifier for quick storage and retrieval.
+
+Q.6 Serverless computing and its disadvantage.
+> Serverless computing enables developers to build applications faster by eliminating the need for them to manage infrastructure. 
+Drawbacks of serverless computing include: Security. You'll hand part of your data to another company that may or may not protect it. 
+
+Q.7 Microservices.
+> Microservices are an architectural approach to developing software applications as a collection of small, independent services that communicate with each other over a network. Instead of building a monolithic application where all the functionality is tightly integrated into a single codebase, microservices break down the application into smaller, loosely coupled services.
+
+Q.8 Cloud watch.
+> Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time.
+> You can create alarms that watch metrics and send notifications or automatically make changes to the resources you are monitoring when a threshold is breached. For example, you can monitor the CPU usage and disk reads and writes of your Amazon EC2 instances and then use that data to determine whether you should launch additional instances to handle increased load. You can also use this data to stop under-used instances to save money.
+
+Q.9 Edge computing. Edge vs cloud computing.
+> Edge computing is defined as the practice of processing and computing client data closer to the data source rather than on a centralized server or a cloud-based location. At its simplest, edge computing brings computing resources, data storage, and enterprise applications closer to where the people actually consume the information. Applications that require low latency and real-time decision-making, such as IoT devices, autonomous vehicles, and AR/VR systems.
+> Cloud Computing is a model for delivering information technology services over the internet. Applications that do not have strict latency requirements, such as web applications, email, and file storage.
+
+Q.10 API gateway
+> An API Gateway acts as a mediator between client applications and backend services in microservices architecture. It is a software layer that functions as a single endpoint for various APIs performing tasks such as request composition, routing, and protocol translation.
+
+Q.11 XaaS
+> XaaS is a collective term that refers to the delivery of anything as a service. It encompasses the many products, tools and technologies that vendors deliver to users as a service over a network -- typically the internet -- as an alternative to providing them locally or on-site to an enterprise. 
+> Xaas and Saas differ by degree of specificity. Xaas is a general term however SaaS specifically refers to a cloud-based software distribution model in which a cloud provider hosts applications and provides them as a service to users over the internet or other network.
+
+Q.12 Hypervisor.
+> A hypervisor is a software that you can use to run multiple virtual machines on a single physical machine. Every virtual machine has its own operating system and applications. The hypervisor allocates the underlying physical computing resources such as CPU and memory to individual virtual machines as required. Thus, it supports the optimal use of physical IT infrastructure. 
+
+Q.13 Load balancing.
+> Load balancing is an essential technique used in cloud computing to optimize resource utilization and ensure that no single resource is overburdened with traffic. It is a process of distributing workloads across multiple computing resources, such as servers, virtual machines, or containers, to achieve better performance, availability, and scalability. 
+Three types of load balancing-
+1) Network Load Balancing: This technique is used to balance the network traffic across multiple servers or instances. It is implemented at the network layer and ensures that the incoming traffic is distributed evenly across the available servers.
+2) Application Load Balancing: This technique is used to balance the workload across multiple instances of an application. It is implemented at the application layer and ensures that each instance receives an equal share of the incoming requests.
+3) Database Load Balancing: This technique is used to balance the workload across multiple database servers. It is implemented at the database layer and ensures that the incoming queries are distributed evenly across the available database servers.
+
+Q.14 GPLv2 licensce. Software that come under this license and their alternatives.
+> The GNU General Public License (GNU GPL or simply GPL) is a series of widely used free software licenses, or copyleft, that guarantee end users the four freedoms to run, study, share, and modify the software.==============
+Software that come under GPLv2 - Linux Kernel, MySQL, GCC, Busybox.
+Software that do not use GPLv2- Python,Ngnix, MongoDb, Docker.
+
+Q.15 Short report on terminologies of Docker and Kubernetes.
+> Terminologies of Docker and Kubernetes
+
+Docker:
+1) Container: A lightweight, standalone, executable package that includes everything needed to run a piece of software, including the code, runtime, libraries, and dependencies.
+2) Image: A read-only template used to create containers. It contains the application and all its dependencies.
+3) Dockerfile: A text document that contains all the commands a user could call on the command line to assemble an image.
+4) Registry: A storage and content delivery system, holding named Docker images, available in different tagged versions.
+5) Containerization: The process of encapsulating an application and its dependencies into a container.
+
+Kubernetes:
+1) Pod: The smallest, most basic deployable object in Kubernetes. It represents a single instance of a running process in the cluster.
+2) Deployment: A Kubernetes resource that manages a set of identical pods, ensuring that they have the correct configuration and are scaled up or down as needed.
+3) Service: An abstraction that defines a logical set of pods and a policy by which to access them. It enables external traffic to access a set of pods.
+4) Node: A worker machine in Kubernetes, part of a cluster, where containers are deployed.
+5) Namespace: A way to divide cluster resources between multiple users or teams, providing a scope for names. It is often used to create virtual clusters within a physical cluster.
+ 
+Q.16 How to make matplotlib graph interactive?
+> matplotlib.pyplot.isinteractive()
+Return whether plots are updated after every plotting command.
+The interactive mode is mainly useful if you build plots from the command line and want to see the effect of each command while you are building the figure.
+
+In interactive mode:
+1) newly created figures will be shown immediately;
+2) figures will automatically redraw on change;
+3) pyplot.show will not block by default.
+
+Q.19 Check Linters.
+> Linters are programs that advise about code quality by displaying warnings and errors. They can detect your Python code mistakes, notice invalid code patterns and find elements that do not follow your conventions.
+
+
+
