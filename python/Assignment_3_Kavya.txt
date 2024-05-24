@@ -1,0 +1,112 @@
+Python Assignment -3 questions :
+ 
+1. Describe the functionality of the `describe()` function and its variations.
+Solution- In Python, the describe() function is typically associated with Pandas DataFrames. It provides descriptive statistics for the DataFrame, such as count, mean, standard deviation, minimum, and maximum values, quartiles, etc., for numerical columns.
+Variations of the describe() function include:
+
+include='all': Provides descriptive statistics for both numerical and categorical columns.
+percentiles: Allows you to specify custom percentiles to include in the output.
+exclude: Allows you to exclude specific data types from the output.
+
+2. Specify the maximum character limit permissible for file names and file paths in the Windows operating system. Additionally, enumerate the special characters that are prohibited in file names.
+Solution- In the Windows operating system, the maximum character limit for file names is 255 characters. However, this limit includes the entire path, so the actual limit for file names within a specific folder depends on the length of the folder path.
+Prohibited characters include:
+< (less than) , > (greater than), : (colon), " (double quote), / (forward slash), \ (backslash)
+| (vertical bar or pipe), ? (question mark) , * (asterisk)
+
+3. Demonstrate how to achieve a matplotlib operation using plotly.
+Solution- 
+import numpy as np
+
+# Generate sample data
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+import plotly.graph_objects as go
+
+# Create Plotly line plot
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=x, y=y, mode='lines', name='sin(x)'))
+fig.update_layout(title='Plotly Line Plot', xaxis_title='X', yaxis_title='Y', showlegend=True)
+fig.show()
+
+4. Identify alternatives to the Itertools module in Python.
+Solution- 
+While the itertools module in Python is incredibly powerful for working with iterators and combinatorial functions, there are some alternative approaches and libraries you can use for similar tasks-
+Loop Constructs: In many cases, you can achieve similar functionality using plain loop constructs in Python. For example, instead of using itertools.cycle() to cycle through an iterable indefinitely, you can use a while loop.
+
+List Comprehensions and Generator Expressions: List comprehensions and generator expressions are powerful constructs in Python for creating lists and iterators, respectively. They can often replace the need for certain itertools functions, especially for simple operations.
+
+Functional Programming Techniques: Python supports functional programming techniques, such as map(), filter(), and reduce(), which can be used as alternatives to some itertools functions.
+
+Custom Functions: Depending on your specific use case, you may find it beneficial to write custom functions tailored to your needs rather than using functions from the itertools module.
+
+5. Provide a Python script demonstrating database connectivity, CSV loading, CRUD operations, and encoding handling between CSV (utf-8) and a database (latin-9). Furthermore, ensure the CSV dataset contains over 100,000 rows, encompassing words from diverse languages.
+
+6. Develop a module and associated packages within a library, followed by installation using pip.
+Solution - PFA .py files in a folder named area
+
+
+7. Instruct on the process of extracting date-time data from a DataFrame and exporting it to an Excel file using Pandas while preserving the original data type.
+Solution- 
+import pandas as pd
+
+# Sample DataFrame with datetime data
+data = {'Date': ['2022-01-01', '2022-01-02', '2022-01-03'],
+        'Value': [100, 200, 300]}
+df = pd.DataFrame(data)
+
+# Convert 'Date' column to datetime if needed
+df['Date'] = pd.to_datetime(df['Date'])
+
+# Export DataFrame to Excel while preserving datetime data type
+excel_file = 'datetime_data.xlsx'
+df.to_excel(excel_file, index=False)
+
+print("DataFrame exported to Excel successfully.")
+
+In this example:
+We create a sample DataFrame df with a 'Date' column containing date-time data.
+If the 'Date' column were not already in datetime format, we could use pd.to_datetime() to convert it.We then export the DataFrame to an Excel file named 'datetime_data.xlsx' using to_excel().
+The index=False parameter is used to prevent writing row indices to the Excel file.
+
+8. Propose alternative methods to replace the usage of the iloc function in Python.
+Solution - Alternatives to iloc are-
+a) iat[]: If you want to access a single scalar value based on its integer position, you can use.iat[]. It's faster than iloc[] as it doesn't perform any label resolution.
+b) .at[]: Similar to .iat[], but uses labels instead of integer positions.
+c) Using Indexing: Directly use indexing on DataFrames or Series objects. 
+d) .head() and .tail(): To select the first or last rows of a DataFrame, you can use these methods.
+e) Boolean Indexing: You can use boolean arrays to filter rows based on a condition.
+df[df['column_name'] > 0]  # Selects rows where 'column_name' is greater than 0
+
+
+9. Illustrate the procedure for resetting the index in Python.
+Solution -
+import pandas as pd
+
+# Sample DataFrame
+data = {'A': [1, 2, 3], 'B': [4, 5, 6]}
+df = pd.DataFrame(data)
+
+# Display the DataFrame before resetting index
+print("DataFrame before resetting index:")
+print(df)
+
+# Reset the index
+df_reset = df.reset_index()
+
+# Display the DataFrame after resetting index
+print("\nDataFrame after resetting index:")
+print(df_reset)
+
+Output 
+DataFrame before resetting index:
+   A  B
+0  1  4
+1  2  5
+2  3  6
+
+DataFrame after resetting index:
+   index  A  B
+0      0  1  4
+1      1  2  5
+2      2  3  6
