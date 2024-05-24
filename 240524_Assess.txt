@@ -1,0 +1,124 @@
+1. String Slicing
+str = 'Aryan'
+str1 = str[2::-1]
+print(str1)
+
+2. Swap Case
+str1 = 'Aryan'
+str2 = str1.swapcase()
+print(str2)
+
+3. Sort vs Sorted
+	Sort function sorts the initial list and stores it in that same list
+	Sorted function sorts the list
+	
+4. Current TimeStamp
+	import datetime
+	print(datetime.datetime.now())
+	
+5. Function Thru Another Function
+	Yes, we can pass a function thru another function 
+	
+6. Decorator vs Generator
+	Generators return an iterator object that goes through the sequence and don't store all the data at the same time
+	Decorators dynamically modify existing functions which can take place before, during or after the function execution
+	
+7. Function Annotators
+	They are the metadata that we add at the beginning of the function
+	using the ''' characters, which show the arguments and the output 
+	of that function
+	
+8. Walrus Operator
+	Used to give a value to a variable, useful if we don't want to 
+	calculate the value multiple times
+	
+9. Format String vs Raw String
+	Format strings are used whenever we need to pass variables (via curly brackets)
+	Raw strings preserve the raw string value of a / or a {}
+	
+10. Frozen Set vs Normal Set 
+	Frozen Sets are immutable and cannot be modified after creation
+	Sets are mutable
+
+11. One Hot Encoding
+	Used to assign categorical variables to numeric
+	Easier to process for machine learning algorithms
+	Can drastically increase the number of dimensions though
+	
+12. / vs // operator
+	5/2 will return the float value of 2.5
+	5//2 will return the int value (floor function) of 2
+	
+13. Head and Tail in Pandas
+	df.head(num) will return the top num values in a DataFrame
+	df.tail(num) will return the botton num values in a DataFrame
+	
+13. Multiindexing In Pandas
+	Allows for multiple indexes for one row in a dataframes
+	Helps to handle higher dimensionality
+
+14. Is There ReIndexing In Pandas
+	Yes, we can use it to modify row and column labels, imputing and reordering of data
+	
+15. Join vs Merge in Pandas
+	Join connects dataframes based on only their indices
+	Merge can connect dataframes based on either their column or index, so it's more flexible than join
+	
+16. Time Delta 
+	datetime.timedelta() takes the difference between two datetime fields
+	
+17. Append vs Concat
+	Append only appends rows from one DataFrame to the end of the other DataFrame
+	Concat combines DataFrames along a given axis (row or column wise)
+	
+18. Sum of three columns
+	df = df.assign(Total = lambda x: (x['Sub1']+x['Sub2']+x['Sub3']))
+
+19. Pickling
+	Converts python objects into a byte-stream format (8 bit)
+	These files can be converted back into Python objects whenever required
+	
+20. How To Empty a Dictionary?
+	Suppose we have a full dictionary called dict1, then 
+		dict1 = {}
+	or
+		dict1 = Dict()
+
+21. Rolling in Pandas
+	Used to calculate moving window objects of a DataFrame
+	Used to calculate various statistics of that window or apply custom functions on that window
+	
+22. Default Value for a Dictionary
+	dict1 = {'a': 1, 'b': 2}
+	default_value = None
+ 
+	for key in ['a', 'b', 'c', 'd']:
+		dict1[key] = dict1.get(key, default_value)
+ 
+	print(dict1)
+	
+23. D = dict()
+	for x in enumerate(range(2)):
+	  D[x[0]] = x[1]
+	  D[x[1]+7] = x[0]
+	  
+	What is the output of this function?
+	
+	{0: 0, 7: 0, 1: 1, 8: 1}
+
+24. Tuple Comprehension
+	It is not possible as tuples are immutable
+	We can convert the tuple to a list and use list comprehension 
+	
+25. Pandas Group By using any column and Sort By using multiple columns
+Grouping by any column:
+	Identify the column for grouping: Decide which column you want to use to categorize your data.
+	Use the .groupby() method: Apply the .groupby() method on your DataFrame, specifying the column name for grouping.
+ 
+Sorting within groups (by multiple columns):
+	Sort: Call the sort_values() method on the grouped object, specifying the column(s) to sort by.
+	Reset index (optional): By default, sorting creates a temporary index within groups. We can use reset_index(drop=True) to convert it back to the original grouping column.
+	
+26. Linders dictionary initalization
+	When keys and values are readily available, dictionary comprehension is a good choice
+	If the keys or values might be dynamic during runtime, the dict() constructor is better
