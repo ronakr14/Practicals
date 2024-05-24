@@ -1,0 +1,7 @@
+[Settings]
+
+DRIVER_NAME = SQL SERVER
+SERVER_NAME = NIT1LPT-24-011
+DATABASE_NAME = training
+username = sa
+password = root@1234
